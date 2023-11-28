@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font-family: Lato , Arial, Helvetica, sans-serif; font-weight: 400 ; font-size: 18px; color: #333333; line-height: 32px; border-color: rgb(25, 180, 89);}
+        h1{font-family: Roboto, Arial, Helvetica, sans-serif; font-weight: 700; font-size: 55px; color: #2b2b2b; line-height: 66px;}
+    </style>
+</head>
+<body>
+    <button onclick="cambiaColore()">cambia colore</button>
+    <button onclick="grassetto()">grassetto</button>
+    <button onclick="magic()">scompare-appare</button>
+
+    <p id="par1">La Milano Music Week nasce nel 2017 ed è promossa da Comune di Milano, Asso Concerti, Assomusica, FIMI, NuovoIMAIE e SIAE con lU+2019intento di creare unU+2019intera settimana dedicata alla musica e al suo mercato, in una città che vive da sempre di concerti e appuntamenti musicali.</p>
+    <p id="par2">belive è una società che organizza viaggi, ma è molto più di un tour operator. Mira a diventare un punto di riferimento per la generazione degli young adults. La musica è al centro dellU+2019esperienza belive: una vera e propria immersione nellU+2019essenza dei bpm e nelle emozioni dei generi più elettronici.</p>
+    <p id="par3">In occasione della Milano Music Week 2023 belive e DJ MAG Italia hanno deciso di creare un progetto comune assolutamente inedito: uno spazio di aggregazione in uno dei punti più frequentati della città, tra i locali dei Navigli e il quartiere generale della MMW in via Tortona.</p>
+
+
+    <script>
+        function cambiaColore() {
+            document.getElementById("par1").style.color= ('#' + Math.floor(Math.random() * 16777215).toString(16))
+            document.getElementById("par2").style.color= ('#' + Math.floor(Math.random() * 16777215).toString(16))
+            document.getElementById("par3").style.color= ('#' + Math.floor(Math.random() * 16777215).toString(16))
+        }
+        function grassetto() {
+            document.getElementById("par1").style.fontWeight= "bold";
+            document.getElementById("par2").style.fontWeight= "bold";
+            document.getElementById("par3").style.fontWeight= "bold";
+
+        }
+        function magic() {
+            document.getElementById("par1").style.display= "none";
+            document.getElementById("par2").style.display= "none";
+            document.getElementById("par3").style.display= "none";
+            setTimeout(() => {
+                document.getElementById("par1").style.display= "block";
+                document.getElementById("par2").style.display= "block";
+                document.getElementById("par3").style.display= "block";
+            },500);
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
